@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="running">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: rgb(255, 228, 196);
+    font-family: 'Balsamiq Sans', cursive;
+
+}
+.btn, input, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+  }
+  h1{
+    font-size: 30px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+input,
+textarea {
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+#container{
+    margin: 10px;
+}
+</style>
+</head>
+<body>
+    <h1>Новый рецепт</h1>
+<form method="POST" action="/">
+    <div id="container">
+        <input name="name" placeholder="Название"/>
+    </div>
+    <div id="container">
+        <label name="category"> Выбор категории</label>
+        <select name="category">
+            <option >Завтрак</option>
+            <option>Салаты</option>
+            <option>обед</option>
+            <option> Ужин</option>
+        </select>
+    </div> 
+<div id="container">
+    <textarea name="recipe" id="" cols="30" rows="10"></textarea>
+</div>
+    <button class="btn">Отправить</button>
+</form>
+</body>
+</html>
