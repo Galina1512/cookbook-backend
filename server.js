@@ -31,7 +31,8 @@ app.post('/', (req, res) =>{
         recipe: req.body.recipe
     })
     newRecipe.save();
-    res.sendFile(__dirname + '/answer.html')
+//     res.sendFile(__dirname + '/answer.html')
+    res.send(newRecipe)
 })
 
 app.use(routes);
